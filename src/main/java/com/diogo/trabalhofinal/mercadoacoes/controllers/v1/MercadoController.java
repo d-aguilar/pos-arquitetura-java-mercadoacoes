@@ -41,4 +41,11 @@ public class MercadoController {
 		_mercadoService.venderAcoes(idCliente, idEmpresa, quantidadeAcoes);
 	}
 	
+	@ApiOperation(value = "Cadastrar ação para empresa")
+	@PostMapping
+	@ResponseStatus(HttpStatus.OK)
+	public Acao cadastarAcao(@RequestBody Acao acao){
+		return _mercadoService.includeAcaoEmpresa(acao);
+	}
+	
 }

@@ -15,7 +15,6 @@ import lombok.Setter;
 @Document(collection = "acoes")
 public class Acao {
 	
-	private String id;
 	private Long idEmpresa;
 	private float valor;
 	
@@ -23,5 +22,17 @@ public class Acao {
 	private Date dataCompra;
 	@Nullable
 	private Long idCliente;
+	public Long getIdEmpresa() {
+		return idEmpresa;
+	}
+	public void setIdEmpresa(Long idEmpresa) {
+		this.idEmpresa = idEmpresa;
+	}
+	public float getValor() {
+		return valor;
+	}
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
 	
 }

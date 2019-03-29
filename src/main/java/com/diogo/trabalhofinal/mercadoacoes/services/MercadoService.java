@@ -9,5 +9,7 @@ public interface MercadoService {
 	Set<Acao> obterTodasAcoes();
 	Set<Acao> comprarAcoes(String idCliente, String idEmpresa, int quantidadeAcoes);
 	void venderAcoes(String idCliente, String idEmpresa, int quantidadeAcoes);
+	Set<Acao> getAcoesByIdEmpresa(Long id);
+	Acao includeAcaoEmpresa(Acao acao);
 	
 }

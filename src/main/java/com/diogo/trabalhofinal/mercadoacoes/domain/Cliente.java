@@ -15,10 +15,19 @@ import lombok.Setter;
 @Data
 @Document(collection = "clientes")
 public class Cliente {
+	
 	@Id
-	private String id;
-	private Long nome;
+	private Long id;
+	private String nome;
 	
 	@DBRef
 	private List<Acao> acoes;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 }
