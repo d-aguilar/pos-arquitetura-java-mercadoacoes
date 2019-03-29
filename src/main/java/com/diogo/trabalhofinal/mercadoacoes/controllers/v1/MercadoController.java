@@ -29,7 +29,7 @@ public class MercadoController {
 	@ApiOperation(value = "Comprar ações")
 	@PostMapping
 	@ResponseStatus(HttpStatus.OK)
-	public Set<Acao> comprarAcoes(@RequestBody String idCliente, @RequestBody String idEmpresa, @RequestBody int quantidadeAcoes){
+	public Set<Acao> comprarAcoes(@RequestBody Long idCliente, @RequestBody Long idEmpresa, @RequestBody int quantidadeAcoes) throws Exception{
 		Set<Acao> acoes = _mercadoService.comprarAcoes(idCliente, idEmpresa, quantidadeAcoes);
 		return acoes;
 	}
@@ -37,7 +37,7 @@ public class MercadoController {
 	@ApiOperation(value = "Vender ações")
 	@PostMapping
 	@ResponseStatus(HttpStatus.OK)
-	public void venderAcoes(@RequestBody String idCliente, @RequestBody String idEmpresa, @RequestBody int quantidadeAcoes){
+	public void venderAcoes(@RequestBody Long idCliente, @RequestBody Long idEmpresa, @RequestBody int quantidadeAcoes) throws Exception{
 		_mercadoService.venderAcoes(idCliente, idEmpresa, quantidadeAcoes);
 	}
 	

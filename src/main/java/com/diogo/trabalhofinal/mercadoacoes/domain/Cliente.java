@@ -19,6 +19,7 @@ public class Cliente {
 	@Id
 	private Long id;
 	private String nome;
+	private String email;
 	
 	@DBRef
 	private List<Acao> acoes;
@@ -29,5 +30,13 @@ public class Cliente {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }
